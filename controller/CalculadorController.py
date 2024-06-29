@@ -21,7 +21,7 @@ class CalculadorController:
             elif self.ventana.rbresta.isChecked():
                 resultado = CalculadoraService.resta(num1,num2)
                 operacion = "resta"
-            elif self.ventana.rbmultiplica.isChecked():
+            elif self.ventana.rbmultiplicar.isChecked():
                 resultado = CalculadoraService.multiplica(num1,num2)
                 operacion = "multiplica"
             elif self.ventana.rbdivide.isChecked():
@@ -33,5 +33,5 @@ class CalculadorController:
         except:
             operacion = "Ingresar valores numericos"
         finally:
-            self.ventana.lblresultado.setText(operacion+" = " +
+            self.ventana.lblresultado.setText(operacion+" = " +                                          
                                               str(resultado))
